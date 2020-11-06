@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main(){
+  system("echo hello china");
+  system("ifconfig");
+  system("date");
+  return 0;
+}
