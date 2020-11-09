@@ -1,5 +1,27 @@
 #include <stdio.h>
 
+int fibo_recur(int n);
+int fibo_loop(int n);
+
+int main(){
+  int n;
+  int result;
+  scanf("%d", &n);
+  printf("递归算法求的前10项为:");
+  for(int i = 1; i <=n; i++){
+    result = fibo_recur(i);
+    printf("%3d", result);
+  }
+  printf("\n循环算法求的前10项为:");
+  for(int i = 1; i <= n; i++){
+    result = fibo_loop(i);
+    printf("%3d", result);
+  }
+  printf("\n");
+  return 0;
+}
+
+
 int fibo_recur(int n){
   if(n == 1 || n == 2){
     return 1;
@@ -22,20 +44,3 @@ int fibo_loop(int n){
   return sum;
 }
 
-int main(){
-  int n;
-  int result;
-  scanf("%d", &n);
-  printf("递归算法求的前10项为:");
-  for(int i = 1; i <=n; i++){
-    result = fibo_recur(i);
-    printf("%3d", result);
-  }
-  printf("\n循环算法求的前10项为:");
-  for(int i = 1; i <= n; i++){
-    result = fibo_loop(i);
-    printf("%3d", result);
-  }
-  printf("\n");
-  return 0;
-}
