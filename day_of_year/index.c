@@ -32,7 +32,7 @@ int main()
       sum = 334;break;
   }
   sum = sum + day;
-  if((year % 4 == 0 && year % 100 == 0) || year % 400 == 0){
+  if(((year % 4 == 0 && year % 100 == 0) || year % 400 == 0) && month > 2){
     sum++;
   }
   printf("这是这一年的第%d天。\n", sum);
