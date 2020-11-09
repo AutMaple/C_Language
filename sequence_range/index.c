@@ -1,24 +1,9 @@
 #include <stdio.h>
 
-int sort(int array[], int start, int length){
-  for(int i = 0; i < length-start-1; i++){
-    for(int j = start; j < length - i - 1; j++){
-      if(array[j] > array[j+1]){
-        int tmp = array[j];
-        array[j] = array[j+1];
-        array[j+1] = tmp;
-      }
-    }
-  }
-}
 
-int print_array(int array[], int start, int length){
-  for(int j=start; j < length; j++){
-    printf("%d ", array[j]);
-  }
-  printf("\n");
-  return 0;
-}
+int sort(int array[], int start, int length);
+int print_array(int array[], int start, int length);
+
 
 int main(){
   int a[100];
@@ -41,3 +26,25 @@ int main(){
   printf("max - min = %d - %d = %d\n", a[n-1], min, a[n-1] - min);
   return 0;
 }
+
+
+int sort(int array[], int start, int length){
+  for(int i = 0; i < length-start-1; i++){
+    for(int j = start; j < length - i - 1; j++){
+      if(array[j] > array[j+1]){
+        int tmp = array[j];
+        array[j] = array[j+1];
+        array[j+1] = tmp;
+      }
+    }
+  }
+}
+
+int print_array(int array[], int start, int length){
+  for(int j=start; j < length; j++){
+    printf("%d ", array[j]);
+  }
+  printf("\n");
+  return 0;
+}
+
